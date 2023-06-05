@@ -1,0 +1,33 @@
+<%- include("header") -%>
+
+
+    <div class="box" id="heading">
+      <h1>My Fruit Bowl</h1>
+    </div>
+
+    <div class="box" >
+      <% fruitList.forEach(function(fruit){ %>
+        <div class="item">
+          <p> Fruit:  <%=  fruit.name  %>   with a Rating of: <%= fruit.rating %> </p>
+        </div>
+        <div class="item">
+          <p> Review: <%=  fruit.review  %> </p>
+
+        </div>
+        <% }) %>
+        </div>
+
+
+        <div class="headingBox" id="heading">
+          <h1>Add new a Fruit</h1>
+        </div>
+        <form class="item" action="/" method="post">
+            <div class="box">
+            <input type="text" name="fruitName" placeholder="Name of a Fruit" autocomplete="off">
+            <input type="text" name="rating" placeholder="Rate Me" autocomplete="off">
+            <button type="submit" name="list" value="fruitBowl">+</button>
+            </div>
+        </form>
+
+
+<%- include("footer") -%>
